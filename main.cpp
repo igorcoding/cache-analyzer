@@ -7,10 +7,10 @@
 #include <assert.h>
 #include <time.h>
 
-#define NPAD 15
+#define NPAD 63
 #define TWICE(x) x x
 #define ACCESS_CYCLES 2048
-#define ACCESS_COUNT 64
+#define ACCESS_COUNT 256
 
 #define MIN_ARR_SHIFT 2
 #define MAX_ARR_SHIFT 20
