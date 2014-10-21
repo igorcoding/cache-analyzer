@@ -5,8 +5,9 @@
 #include <algorithm>
 #include <sstream>
 #include <assert.h>
+#include <time.h>
 
-#define NPAD 7
+#define NPAD 15
 #define TWICE(x) x x
 #define ACCESS_CYCLES 2048
 #define ACCESS_COUNT 64
@@ -129,6 +130,8 @@ double experiment(el* first_el)
     el* element = first_el;
 
     auto begin_time = std::chrono::steady_clock::now();
+//    clock_t t;
+//    t = clock();
 
     for (int i = 0; i < ACCESS_CYCLES; ++i) {
         TWICE(
@@ -147,6 +150,9 @@ double experiment(el* first_el)
     auto dur = std::chrono::duration_cast<std::chrono::nanoseconds>(end_time - begin_time);
     auto delta = dur / (ACCESS_CYCLES * ACCESS_COUNT);
     return delta.count();
+
+//    t = clock() - t;
+//    return (float) t / (ACCESS_CYCLES * ACCESS_COUNT);
 }
 
 void clear_dependencies(std::vector<el>& arr)
