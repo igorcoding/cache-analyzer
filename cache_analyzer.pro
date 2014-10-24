@@ -6,10 +6,10 @@ CONFIG -= qt
 SOURCES += \
     main.cc
 
-QMAKE_CXXFLAGS += -std=c++11
+QMAKE_CXXFLAGS += -std=c++11 -O0
 
 #DEFINES += _RELEASE
-DEFINES += _DEBUG
+#DEFINES += _DEBUG
 
 HEADERS += \
     main.h

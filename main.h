@@ -36,9 +36,6 @@ double experiment(el<N>* first_el);
 std::string get_plot_data(const std::vector<point>& arr);
 size_t my_log_2(size_t n);
 
-template <typename Iter, typename Generator>
-void my_shuffle(Iter begin, Iter end, Generator&& gen);
-
 template <size_t N>
 void N_expirement();
 
