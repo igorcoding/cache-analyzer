@@ -20,10 +20,10 @@ const unsigned SEED = std::chrono::system_clock::now().time_since_epoch().count(
 
 int main()
 {
-    N_expirement<0>();
-    N_expirement<7>();
-    N_expirement<15>();
-    N_expirement<31>();
+    N_experiment<0>();
+    N_experiment<7>();
+    N_experiment<15>();
+    N_experiment<31>();
 
     return 0;
 }
@@ -105,7 +105,7 @@ size_t my_log_2(size_t n) {
 
 
 template <size_t N>
-void N_expirement() {
+void N_experiment() {
     std::cout << "------ NPAD = " << N << " ------" << std::endl;
 
     size_t el_size = sizeof (el<N>);
@@ -120,7 +120,6 @@ void N_expirement() {
 #else
         std::cout << "." << std::flush;
 #endif
-//        long arr_total_size = 1 << i;
         long arr_size = 1 << (i - el_factor);
 
         double total_linear_time = 0.0;

@@ -37,6 +37,6 @@ std::string get_plot_data(const std::vector<point>& arr);
 size_t my_log_2(size_t n);
 
 template <size_t N>
-void N_expirement();
+void N_experiment();
 
 #endif // MAIN_H
